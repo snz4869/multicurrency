@@ -1,0 +1,116 @@
+ul {
+    list-style-type: none;
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-top: 10px;
+    border: 2px solid darkred;
+}
+
+ul li{margin-bottom:10px;}
+
+.top {
+    position:absolute;
+    left:20px; right:20px;
+    height: 92px;
+    /*background-image: linear-gradient(to right, red, black);*/
+    /*background-image: repeating-linear-gradient(red, black 5%);*/
+    background-image:
+    repeating-linear-gradient(black, transparent 5%),
+    linear-gradient(to right, red, black);
+}
+.left {
+    position:absolute;
+    left:20px; top:92px; bottom: 0;
+    width: 378px;
+}
+.main {
+    position: absolute;
+    left:430px; top:110px; right:0; bottom:0;
+}
+
+.collapsible {
+    background-color: #840000;
+    color: white;
+    cursor: pointer;
+    padding: 10px;
+    width: 100%;
+    border: none;
+    text-align: center;
+    outline: none;
+    font-size: 15px;
+}
+
+.sidebutton {
+    background-color: #840000;
+    color: white;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 15px;
+}
+
+.active, .collapsible:hover {
+    background-color: #993301;
+}
+
+.content {
+    padding: 0 18px;
+    display: none;
+    overflow: hidden;
+    background-color: #f1f1f1;
+}
+.haeder-logo{
+    color: white;
+    font-size: 75px;
+}
+.header-bg{
+    background-image: linear-gradient(#993301, #840000);
+}
+
+.table, .tr, .td{
+    border: 2px solid white;
+    border-collapse: collapse;
+    padding: 1px;
+}
+
+.th {
+    background-color: #840000;
+    color: white;
+    padding: 1px;
+}
+
+.table-td {
+    background-color: #993301;
+    color: white;
+    padding: 2px;
+}
+
+.btn-cal {
+    background-color: #840000;
+    color: white;
+    width: 100px;
+    border: none;
+}
+
+.frame-border{
+    border: 2px solid #840000;
+    width: 60%;
+}
+.frame-border-content{
+    border: 2px solid #840000;
+    width: 40%;
+}
+.frame-bg{
+    background-color: #840000;
+    width: 80%;
+    color: white;
+    font-size: 25px;
+    margin-bottom: 5px;
+}
+
+.text-field{
+    width: 95%;
+}

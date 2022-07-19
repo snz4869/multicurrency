@@ -1,0 +1,40 @@
+<nav th:fragment="sidemenu_admin">
+    <ul id="myMenu">
+        <li>
+            <a th:href="@{/admin-create}">
+            <button type="button" class="collapsible">
+                CREATE USER
+            </button>
+            </a>
+        </li>
+        <li>
+            <a th:href="@{/admin-search}">
+            <button type="button" class="collapsible">
+                SEARCH USER
+            </button>
+            </a>
+        </li>
+        <li>
+            <a th:href="@{/admin-update}">
+            <button type="button" class="collapsible">
+                UPDATE USER
+            </button>
+            </a>
+        </li>
+        <li>
+            <a th:href="@{/admin-delete}">
+            <button type="button" class="collapsible">
+                DELETE USER
+            </button>
+            </a>
+        </li>
+        <li>
+            <a th:href="@{/logout}">
+            <button type="button" class="collapsible">
+                LOGOUT
+            </button>
+            </a>
+        </li>
+    </ul>
+
+</nav>

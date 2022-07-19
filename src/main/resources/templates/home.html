@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Multi Currency</title>
+
+    <link th:href="@{/css/style.css}" rel="stylesheet">
+</head>
+<body>
+<div class="container-fluid">
+    <div class="top">
+        <div th:replace="~{fragment/header :: header}"> </div>
+    </div>
+    <div class="left">
+        <div th:replace="~{fragment/sidemenu_user :: sidemenu_user}"> </div>
+    </div>
+    <div class="main">
+        <div class="frame-bg">WELCOME</div>
+        <div class="frame-border-content">
+            <table class="table" width="100%">
+            <tr class="tr">
+                <th class="th" colspan="2">
+                    APLICATION STATUS
+                </th>
+            </tr>
+            <tr>
+                <td>Status</td>
+                <td>: Offline</td>
+            </tr>
+            <tr>
+                <td>Original File</td>
+                <td>: Reject</td>
+            </tr>
+            <tr>
+                <td>Destination File</td>
+                <td>: Waitting Upload File</td>
+            </tr>
+        </table>
+        </div>
+    </div>
+</div>
+</body>
+</html>

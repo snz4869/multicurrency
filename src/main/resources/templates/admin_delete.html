@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Multi Currency</title>
+
+    <link th:href="@{/css/style.css}" rel="stylesheet">
+</head>
+<body>
+<div class="container-fluid">
+    <div class="top">
+        <div th:replace="~{fragment/header :: header}"> </div>
+    </div>
+    <div class="left">
+        <div th:replace="~{fragment/sidemenu_admin :: sidemenu_admin}"> </div>
+    </div>
+    <div class="main">
+        <div class="frame-border">
+            <table class="table" width="100%">
+                <tr class="tr">
+                    <td class="table-td td">User AD</td>
+                    <td>
+                        <input type="text" class="text-field" name="userAd" id="userAd" value=""/>
+                    </td>
+                </tr>
+                <tr class="tr">
+                    <td class="table-td td">User Role</td>
+                    <td>
+                        <select class="form-control" id="role" name="role">
+                            <option value="">--pilih--</option>
+                            <option value="1">CM Inputter</option>
+                            <option value="2">CM Authorize</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr class="tr">
+                    <td class="table-td td">Status</td>
+                    <td>
+                        <input type="text" class="text-field" name="status" id="status" value=""/>
+                    </td>
+                </tr>
+                <tr class="tr">
+                    <td colspan="2" align="right">
+                        <input class="btn-cal" type="submit" value="SEARCH"/>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Multi Currency</title>
+
+    <link th:href="@{/css/style.css}" rel="stylesheet">
+</head>
+<body>
+<div class="container-fluid">
+    <div class="top">
+        <div th:replace="~{fragment/header :: header}"> </div>
+    </div>
+    <div class="left">
+        <div th:replace="~{fragment/sidemenu :: sidemenu}"> </div>
+    </div>
+    <div class="main">
+        <div class="frame-border">
+        <table class="table" width="100%">
+            <tr class="tr">
+                <th class="th" colspan="4">FX CALCULATOR</th>
+            </tr>
+            <tr class="tr">
+                <td class="table-td td">1</td>
+                <td class="table-td td" colspan="2">ORIGINAL CURRENCY</td>
+                <td>
+                    <select class="form-control" id="objCurrencyFrom" name="objCurrencyFrom">
+                        <option value="">--pilih--</option>
+                    </select>
+                </td>
+            </tr>
+            <tr class="tr">
+                <td class="table-td td">2</td>
+                <td class="table-td td" colspan="2">ORIGINAL AMOUNT</td>
+                <td>
+                    <input type="text" class="text-field" placeholder="0.00" name="originalAmount" id="originalAmount" value=""/>
+                </td>
+            </tr>
+            <tr class="tr">
+                <td class="table-td td">3</td>
+                <td class="table-td td" colspan="2">DESTINATION CURRENCY</td>
+                <td>
+                    <select class="form-control" id="objCurrencyTo" name="objCurrencyTo">
+                        <option value="">--pilih--</option>
+                    </select>
+                </td>
+            </tr>
+            <tr class="tr">
+                <td class="table-td td">4</td>
+                <td class="table-td td" colspan="2">DESTINATION CURRENCY NAME</td>
+                <td>
+                    <input type="text" class="text-field" name="nameCurrency" id="nameCurrency" value=""/>
+                </td>
+            </tr>
+            <tr class="tr">
+                <td></td>
+                <td class="table-td td">4a</td>
+                <td class="table-td td">-Rate-</td>
+                <td>
+                    <input type="text" class="text-field" name="rate" id="rate" value=""/>
+                </td>
+            </tr>
+            <tr class="tr">
+                <td></td>
+                <td class="table-td td">4b</td>
+                <td class="table-td td">USD Equivalent</td>
+                <td>
+                    <input type="text" class="text-field" name="usdEquivalent" id="usdEquivalent" value=""/>
+                </td>
+            </tr>
+            <tr class="tr">
+                <td class="table-td td">5</td>
+                <td class="table-td td" colspan="2">USD / [3]</td>
+                <td>
+                    <input type="text" class="text-field" name="usdTo" id="usdTo" value=""/>
+                </td>
+            </tr>
+            <tr class="tr">
+                <td class="table-td td">6</td>
+                <td class="table-td td" colspan="2">DESTINATION AMOUNT</td>
+                <td>
+                    <input type="text" class="text-field" name="destinationAmount" id="destinationAmount" value=""/>
+                </td>
+            </tr>
+            <tr class="tr">
+                <td colspan="4" align="right">
+                    <input class="btn-cal" type="submit" value="Calculate"/>
+                    <input class="btn-cal" type="reset" value="Clear"/>
+                    <button class="btn-cal" type="button"> Print </button>
+                </td>
+            </tr>
+        </table>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

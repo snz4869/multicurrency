@@ -1,0 +1,48 @@
+<nav th:fragment="sidemenu">
+    <ul id="myMenu">
+        <li>
+            <button type="button" class="collapsible">
+                CALCULATE
+            </button>
+        </li>
+        <li>
+            <button type="button" class="collapsible">
+                ORIGINAL CCY RATE
+            </button>
+        </li>
+        <li>
+            <button type="button" class="collapsible">
+                MULTI CCY RATE
+            </button>
+        </li>
+        <li>
+            <button type="button" class="collapsible">LOGIN</button>
+            <div class="content">
+                <p>LOGIN</p>
+                <div>
+                    <input type="text" placeholder="username" name="username" id="username" value=""/>
+                    <input type="password" placeholder="password" name="password" id="password" value=""/>
+                </div>
+                <input type="submit" value="submit"/>
+            </div>
+        </li>
+    </ul>
+<script>
+
+    var coll = document.getElementsByClassName("collapsible");
+    var i;
+
+    for (i = 0; i < coll.length; i++) {
+        coll[i].addEventListener("click", function() {
+            this.classList.toggle("active");
+            var content = this.nextElementSibling;
+            if (content.style.display === "block") {
+                content.style.display = "none";
+            } else {
+                content.style.display = "block";
+            }
+        });
+    }
+</script>
+
+</nav>

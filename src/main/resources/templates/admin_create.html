@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Multi Currency</title>
+
+    <link th:href="@{/css/style.css}" rel="stylesheet">
+</head>
+<body>
+<div class="container-fluid">
+    <div class="top">
+        <div th:replace="~{fragment/header :: header}"> </div>
+    </div>
+    <div class="left">
+        <div th:replace="~{fragment/sidemenu_admin :: sidemenu_admin}"> </div>
+    </div>
+    <div class="main">
+        <form th:action="@{/prosesCreate}" th:object="${user}" method="post" onSubmit="return validateThisFrom (this);">
+            <div class="frame-border">
+            <table class="table" width="100%">
+                <tr class="tr">
+                    <td class="table-td td">NPK</td>
+                    <td>
+                        <input type="text" name="npk" class="text-field" th:field="*{npk}"/>
+                    </td>
+                </tr>
+                <tr class="tr">
+                    <td class="table-td td">User AD</td>
+                    <td>
+                        <input type="text" name="userad" class="text-field" th:field="*{userAd}"/>
+                    </td>
+                </tr>
+                <tr class="tr">
+                    <td class="table-td td">Email</td>
+                    <td>
+                        <input type="text" name="email" class="text-field" th:field="*{email}"/>
+                    </td>
+                </tr>
+                <tr class="tr">
+                    <td class="table-td td">User Role</td>
+                    <td>
+                        <select class="form-control" name="role" th:field="*{role}" >
+                            <option th:value="''" th:text="'--pilih--'"></option>
+                            <option th:value="'CM Inputter'" th:text="'CM Inputter'"></option>
+                            <option th:value="'CM Authorize'" th:text="'CM Authorize'"></option>
+                        </select>
+                    </td>
+                </tr>
+                <tr class="tr">
+                    <td colspan="2" align="right">
+                        <input class="btn-cal" type="submit" value="ADD"/>
+                    </td>
+                </tr>
+            </table>
+        </div>
+        </form>
+    </div>
+</div>
+<script type="text/javascript">
+    function validateThisFrom(thisForm) {
+        if (thisForm.npk.value === "") {
+            alert("Please input NPK");
+            thisForm.npk.focus();
+            return false;
+        }
+
+        if (thisForm.email.value === ""){
+            alert("User AD or Email Can not Null");
+            thisForm.npk.focus();
+            return false;
+        }
+
+        if (thisForm.role.value === "") {
+            alert("Please select role");
+            thisForm.role.focus();
+            return false;
+        }
+    }
+</script>
+</body>
+</html>
